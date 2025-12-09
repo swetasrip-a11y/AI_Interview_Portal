@@ -1,6 +1,19 @@
 # DEMO VIDEO LINK (DRIVE)
 https://drive.google.com/file/d/1HIWSd7hlR2HG9QrvXEUbTjc7_vR65OkA/view?usp=sharing
 
+# USER 
+For Canditate :
+email : sample@gmail.com
+password : sample123
+
+For Interviewer :
+email: admin@gmail.com
+password : admin123
+
+For Company :
+email : sample@gmail.com
+password : sample
+
 # 🎯 Interview Portal - Complete Setup & Deployment Guide
 
 An advanced interview platform with **real-time data sync**, **AI-powered interviews**, **MySQL/XAMPP support**, and **comprehensive admin dashboard**.
