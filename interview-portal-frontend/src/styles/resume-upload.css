@@ -1,0 +1,428 @@
+/* ============================================
+   RESUME UPLOAD STYLING
+   Real-time Upload with Dark Theme
+   ============================================ */
+
+.resume-upload-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #050810 0%, #0a0e27 50%, #1a1f35 100%);
+  padding: var(--spacing-2xl);
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-2xl);
+  gap: var(--spacing-xl);
+}
+
+.resume-header-content h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-sm);
+}
+
+.resume-header-content p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.resume-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Message Alerts */
+.alert {
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-weight: 600;
+  animation: slideIn 0.3s ease-out;
+}
+
+.alert-success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 2px solid rgba(16, 185, 129, 0.3);
+}
+
+.alert-error {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+.alert-warning {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+  border: 2px solid rgba(249, 115, 22, 0.3);
+}
+
+/* Upload Area */
+.upload-area {
+  background: var(--bg-surface);
+  border: 3px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.upload-area:hover {
+  border-color: var(--accent-purple);
+  background: var(--bg-surface-light);
+}
+
+.upload-area.active {
+  border-color: var(--accent-blue);
+  background: var(--bg-surface-light);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+.upload-area.active::before {
+  opacity: 1;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  animation: float 3s ease-in-out infinite;
+}
+
+.upload-area h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.upload-area p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.file-input-label {
+  display: inline-block;
+}
+
+.file-info {
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  margin-top: var(--spacing-md);
+}
+
+/* File Preview */
+.file-preview {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.preview-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  background: rgba(99, 102, 241, 0.1);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  animation: slideIn 0.3s ease-out;
+}
+
+.preview-icon {
+  font-size: 1.5rem;
+}
+
+.preview-name {
+  flex: 1;
+  text-align: left;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.preview-remove {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preview-remove:hover {
+  background: rgba(239, 68, 68, 0.4);
+  transform: scale(1.05);
+}
+
+/* Progress Section */
+.progress-section {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-surface);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
+}
+
+.progress-text {
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.progress-status {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Upload Button */
+.upload-btn {
+  width: 100%;
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: 1.1rem;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+  transition: all 0.3s ease;
+}
+
+.upload-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Uploaded Resumes */
+.uploaded-resumes {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-2xl);
+  border-top: 1px solid var(--border-color);
+}
+
+.uploaded-resumes h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.5rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+}
+
+.resumes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.resume-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.resume-card:hover {
+  border-color: var(--accent-purple);
+  background: var(--bg-surface-light);
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
+  transform: translateY(-4px);
+}
+
+.resume-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.resume-icon {
+  font-size: 2rem;
+}
+
+.resume-card-header h3 {
+  color: var(--text-primary);
+  word-break: break-word;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.resume-card-info {
+  background: rgba(99, 102, 241, 0.05);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.resume-card-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.resume-card-info p:last-child {
+  margin-bottom: 0;
+}
+
+.status-completed {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.status-pending {
+  color: #f97316;
+  font-weight: 600;
+}
+
+.status-failed {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* Card Actions */
+.resume-card-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+/* Resume Tips */
+.resume-tips {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.resume-tips h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.resume-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-tips li {
+  color: var(--text-secondary);
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.resume-tips li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-upload-container {
+    padding: var(--spacing-lg);
+  }
+
+  .resume-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .resume-header-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .upload-area {
+    padding: var(--spacing-lg);
+  }
+
+  .resumes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-card-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-header-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .upload-icon {
+    font-size: 2rem;
+  }
+
+  .upload-area {
+    padding: var(--spacing-md);
+  }
+}

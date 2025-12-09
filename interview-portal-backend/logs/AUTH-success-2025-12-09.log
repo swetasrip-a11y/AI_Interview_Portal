@@ -1,0 +1,4 @@
+{"timestamp":"2025-12-09T06:56:16.396Z","level":"SUCCESS","service":"AUTH","message":"User logged in","data":{"userId":9,"email":"puvi@gmail.com"}}
+{"timestamp":"2025-12-09T13:07:23.498Z","level":"SUCCESS","service":"AUTH","message":"User logged in","data":{"userId":1,"email":"sample@gmail.com"}}
+{"timestamp":"2025-12-09T13:09:18.850Z","level":"SUCCESS","service":"AUTH","message":"User logged in","data":{"userId":2,"email":"admin@gmail.com"}}
+{"timestamp":"2025-12-09T13:09:44.324Z","level":"SUCCESS","service":"AUTH","message":"User logged in","data":{"userId":4,"email":"company@gmail.com"}}

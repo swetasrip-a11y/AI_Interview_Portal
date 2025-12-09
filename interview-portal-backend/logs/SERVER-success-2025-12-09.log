@@ -1,0 +1,7 @@
+{"timestamp":"2025-12-09T06:53:39.439Z","level":"SUCCESS","service":"SERVER","message":"Database initialized successfully","data":{}}
+{"timestamp":"2025-12-09T06:53:39.610Z","level":"SUCCESS","service":"SERVER","message":"13 routes loaded","data":{}}
+{"timestamp":"2025-12-09T06:53:39.612Z","level":"SUCCESS","service":"SERVER","message":"Server running on http://localhost:5000","data":{}}
+{"timestamp":"2025-12-09T06:57:58.677Z","level":"SUCCESS","service":"SERVER","message":"HTTP server closed","data":{}}
+{"timestamp":"2025-12-09T13:06:24.897Z","level":"SUCCESS","service":"SERVER","message":"Database initialized successfully","data":{}}
+{"timestamp":"2025-12-09T13:06:25.079Z","level":"SUCCESS","service":"SERVER","message":"13 routes loaded","data":{}}
+{"timestamp":"2025-12-09T13:06:25.082Z","level":"SUCCESS","service":"SERVER","message":"Server running on http://localhost:5000","data":{}}
