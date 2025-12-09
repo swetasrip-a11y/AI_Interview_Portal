@@ -14,6 +14,8 @@ For Company :
 email : sample@gmail.com
 password : sample
 
+(This is sample user inputs)
+
 # 🎯 Interview Portal - Complete Setup & Deployment Guide
 
 An advanced interview platform with **real-time data sync**, **AI-powered interviews**, **MySQL/XAMPP support**, and **comprehensive admin dashboard**.
