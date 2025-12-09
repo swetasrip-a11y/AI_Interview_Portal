@@ -11,8 +11,8 @@ email: admin@gmail.com
 password : admin123
 
 For Company :
-email : sample@gmail.com
-password : sample
+email : company@gmail.com
+password : company
 
 (This is sample user inputs)
 
